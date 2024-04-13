@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
     // 跟 Selenium 剛好顛倒，預設是無頭模式
     browser = await puppeteer.launch({ headless: false });
     
-    // 測試 autograding，開啟無頭模式
+    // 無頭模式無法正常運作
     // browser = await puppeteer.launch();
 
     const page = await browser.newPage();
