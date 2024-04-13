@@ -11,15 +11,15 @@ const puppeteer = require('puppeteer');
 
     const page = await browser.newPage();
     await page.goto('https://pptr.dev/');
-    await new Promise(resolve => setTimeout(resolve, 1000)); // 等待1秒
+    await new Promise(resolve => setTimeout(resolve, 3000)); // 等待3秒
 
     // 點擊搜尋按鈕
     await page.click('button.DocSearch.DocSearch-Button');
-    await new Promise(resolve => setTimeout(resolve, 1000)); // 等待1秒
+    await new Promise(resolve => setTimeout(resolve, 3000)); // 等待3秒
 
     // 輸入搜尋內容
     await page.type('.DocSearch-Input', 'chipi chipi chapa chapa');
-    await new Promise(resolve => setTimeout(resolve, 1000)); // 等待1秒
+    await new Promise(resolve => setTimeout(resolve, 3000)); // 等待3秒
 
     // 找到 URL
     const href = await page.evaluate(() => {
